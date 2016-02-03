@@ -11,7 +11,7 @@ public class AskAgainState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("Ask again later!");
+		System.out.println("Ask again later");
 	}
 
 }

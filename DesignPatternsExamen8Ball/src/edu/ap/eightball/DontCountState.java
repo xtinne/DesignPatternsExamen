@@ -11,6 +11,6 @@ public class DontCountState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("Don't count on it!");
+		System.out.println("Don't count on it");
 	}
 }

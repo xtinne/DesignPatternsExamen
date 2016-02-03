@@ -11,6 +11,6 @@ public class DoubtfulState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("Very doubtful.");
+		System.out.println("Very doubtful");
 	}
 }

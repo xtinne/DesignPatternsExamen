@@ -11,6 +11,6 @@ public class SourcesNoState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("My sources say no.");
+		System.out.println("My sources say no");
 	}
 }

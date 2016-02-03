@@ -13,6 +13,8 @@ public class Eightball {
 	State betterNotTellState;
 	State relyState;
 	State dontCountState;
+	State decidedlyState;
+	State yesState;
 	
 	Random r = new Random();
 	
@@ -39,6 +41,8 @@ public class Eightball {
 		betterNotTellState = new BetterNotTellState(this);
 		relyState = new RelyState(this);
 		dontCountState = new DontCountState(this);
+		decidedlyState = new DecidedlyState(this);
+		yesState = new YesState(this);
 	}
 	
 	public void setState(State state) {
@@ -48,15 +52,26 @@ public class Eightball {
 	public void answerQuestion() {
 		Queue<Integer> randoms = new LinkedList<Integer>();
 		int a = r.nextInt(8);
+		if (q.size() >= 10)
+		{
+			q.remove();
+		}
+		
 		if (q != null)
 		{
-			if (randoms.contains(a) && q.contains(a))
+			//checken of state al is voorgekomen
+			if (q.contains(a))
 			{
 				randoms.add(a);
-				a = r.nextInt(8);
+				if (randoms.contains(a))
+				{
+					a = r.nextInt(8);
+				}
 			}
 			else
+			{
 				q.add(a);
+			}
 		}
 		else
 		{
@@ -82,8 +97,7 @@ public class Eightball {
                  break;
         default: System.out.println("Er is geen antwoord.");
                  break;
-    }
-		
+		}
 		state.answer();
 	}
 }

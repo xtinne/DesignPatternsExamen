@@ -11,6 +11,6 @@ public class ConcentrateState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("Concentrate and ask again.");
+		System.out.println("Concentrate and ask again");
 	}
 }

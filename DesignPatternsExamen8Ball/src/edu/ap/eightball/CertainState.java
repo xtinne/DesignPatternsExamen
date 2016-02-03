@@ -11,7 +11,7 @@ public class CertainState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("It is certain.");
+		System.out.println("It is certain");
 	}
 
 }

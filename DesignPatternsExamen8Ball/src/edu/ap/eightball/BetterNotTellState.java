@@ -11,6 +11,6 @@ public class BetterNotTellState implements State {
 	
 	@Override
 	public void answer() {
-		System.out.println("Better not tell you now.");
+		System.out.println("Better not tell you now");
 	}
 }

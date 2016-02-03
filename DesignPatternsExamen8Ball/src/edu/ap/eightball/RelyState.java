@@ -11,6 +11,6 @@ public class RelyState implements State {
 		
 		@Override
 		public void answer() {
-			System.out.println("You may rely on it.");
+			System.out.println("You may rely on it");
 		}
 }
